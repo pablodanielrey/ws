@@ -2,6 +2,9 @@
 
 from ladon.server.wsgi import LadonWSGIApplication
 from os.path import abspath, dirname
+import inject
+
+inject.configure()
 
 application = LadonWSGIApplication(['SilegWS'],
   [dirname(abspath(__file__))],

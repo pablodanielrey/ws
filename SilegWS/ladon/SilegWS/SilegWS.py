@@ -4,7 +4,7 @@ from ladon.types.ladontype import LadonType
 
 import json
 from SilegData import SilegData
-from types import *
+from SilegTypes import *
 
 
 class SilegWS(object):
