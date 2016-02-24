@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jsonwspclient.js"></script>
+  <script>
+var client = new JSONWSPClient();
+client.loadDescription("http://silegws.econo.unlp.edu.ar/ws/SilegWS/jsonwsp/description",function(){
+  client.getDepartamento({},null,function(result){
+    console.log(result);
+  });
+  
+  client.getMaterias({},null,function(result){
+    console.log(result);
+  });
+  
+  client.getMateriasDpto({idDepartamento:19},null,function(result){
+    console.log(result);
+  })
+  
+  
+  client.getCatedras({idMateria:48},null,function(result){
+    console.log(result);
+  })
+  
+  
+  client.getCuerpoDocente({idCatedra:68},null,function(result){
+    console.log(result);
+  })
+  
+  client.getCuerpoDocenteCargo({idCatedra:68, cargo:"AYUDANTE DIP"},null,function(result){
+    console.log(result);
+  })
+      
+});
+
+</script>
+</head>
+
+
+<body>
+
+
+
+</body>
+</html>
+
